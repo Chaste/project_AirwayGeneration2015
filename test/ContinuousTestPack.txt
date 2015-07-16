@@ -1,1 +1,3 @@
-TestHello.hpp
+airway_generation/TestCalculateAirwayProperties.hpp
+airway_generation/TestGenerateAirways.hpp
+resistances/TestFlowResistance.hpp
