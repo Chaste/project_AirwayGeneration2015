@@ -168,7 +168,7 @@ public:
 		//In this case we assign the average radius of the surrounding nodes
 		for (unsigned i = 0; i < mMajorAirways.GetNumNodes(); ++i)
 		{
-			if(mMajorAirways.GetNode(i)->rGetNodeAttributes()[0] == 0.0)
+			if(mMajorAirways.GetNode(i)->rGetNodeAttributes()[0] == 0.0 && mMajorAirways.GetNode(i)->GetNumContainingElements() != 0u)
 			{
 				double new_radius = 0;
 				//Loop over containing elements/nodes
