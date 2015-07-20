@@ -18,10 +18,10 @@ For manual installation of each dependency, on any version of Linux, see Develop
 
 Before looking at this project, you may wish to look at some of the [UserTutorials basic user tutorials], particularly those marked as Lung tutorials.
 
-== Getting the code ==
+== Getting the code and data ==
 
 If you are reading this as a Wiki page and do not have the bolt-on project you can download it anonymously as  [attachment:AirwayGeneration2015.tar.gz an attachment] to this page. 
-The segmentation data (!AirwayGeneration2015Segmentations.tgz) associated with the project can also be downloaded from the [https://chaste.cs.ox.ac.uk/trac/browser/data/public Chaste data repository].
+The segmentation data (AirwayGeneration2015Segmentations.tgz) associated with the project be downloaded from the [https://chaste.cs.ox.ac.uk/trac/browser/data/public Chaste data repository].
 
 == Documentation ==
 
