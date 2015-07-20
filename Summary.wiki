@@ -21,7 +21,7 @@ Before looking at this project, you may wish to look at some of the [UserTutoria
 == Getting the code ==
 
 If you are reading this as a Wiki page and do not have the bolt-on project you can download it anonymously as  [attachment:AirwayGeneration2015.tar.gz an attachment] to this page. 
-The segmentation data associated with the project can also be downloaded as an [attachment:AirwayGeneration2015Segmentations.tar.gz attachment].
+The segmentation data (!AirwayGeneration2015Segmentations.tgz) associated with the project can also be downloaded from the [https://chaste.cs.ox.ac.uk/trac/browser/data/public Chaste data repository].
 
 == Documentation ==
 
