@@ -15,8 +15,8 @@ for subject in $SUBJECTS
 do
 	cd $CHASTE_DIR
 	
-	# Generate
 	AIRWAYS_MESH=$OUTPUT_DATA_DIR/$subject/$CLINICAL_TRIAL/Oxford/inspiration/airway/${AIRWAY_TYPE}_airways
+	#AIRWAYS_MESH=$OUTPUT_DATA_DIR/$subject/$CLINICAL_TRIAL/Oxford/inspiration/airway/major_airways_centerlines
 	
     block_on_process $MAX_PROCESSES
     nice -10 projects/AirwayGeneration2015/build/$CHASTE_BUILD/resistances/TestFlowResistanceRunner --subject $subject --airways_mesh $AIRWAYS_MESH &
