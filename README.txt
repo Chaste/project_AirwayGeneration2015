@@ -8,7 +8,7 @@ Bordas et al. PLoS ONE 2015
 
 Installation
 
-1.) The project must be checked out into a copy of the Chaste v3.3 source code
+1.) The project must be checked out into a copy of the Chaste trunk source code
     in <chaste_directory>/projects/AirwayGeneration2015
     
 2.) Unpack AirwayGeneration2015Segmentations.tar.gz somewhere. 
