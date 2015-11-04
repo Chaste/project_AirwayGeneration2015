@@ -1,12 +1,15 @@
 
 rm(list = ls(all.names=TRUE))
 
+library(psych)
+
 flow_rates = c("0.0", "0.00017", "0.00083", "0.00167")
 
 for (flow_rate in flow_rates)
 {
 	ios <- read.table("/home/scratch/workspace/Chaste/projects/AirwayGeneration2015/airways_paper_clinical_metadata.csv", header = TRUE, sep = "\t")
 	full <- read.table("/home/compute-lung/AirwayGeneration2015/generated_resistance_data.dat", header = TRUE, sep = "\t")
+	# full <- read.table("/home/compute-lung/AirwayGeneration2015/generated_tracheal_resistance_data.dat", header = TRUE, sep = "\t")
 	major <- read.table("/home/compute-lung/AirwayGeneration2015/major_resistance_data.dat", header = TRUE, sep = "\t")
 	
 	#Update for the new names...
@@ -78,7 +81,6 @@ for (flow_rate in flow_rates)
 	prd<-predict(FEV1_FVC_Resistance_lm, newdata=data.frame(fev1_fvc =newx), interval = "confidence", level = 0.95, type="response")
 	lines(newx,prd[,2],col="red",lty=2)
 	lines(newx,prd[,3],col="red",lty=2)
-	
 	
 	print(paste0("Flow Rate: ", flow_rate));
 	print(paste0("  Major: "));
@@ -156,6 +158,9 @@ for (flow_rate in flow_rates)
 	lines(newx,prd[,2],col="red",lty=2)
 	lines(newx,prd[,3],col="red",lty=2)
 	
+	r_rr <- cor(comb$major, comb$full_resistance, method="spearman")
+	steig_fev1 = r.test(33, r, rr, r_rr);
+	steig_fev1fvc = r.test(33, rt, rrt, r_rr);
 	
 	print(paste0("Flow Rate: ", flow_rate));
 	print(paste0("  Generated: "));
@@ -167,6 +172,8 @@ for (flow_rate in flow_rates)
 	print(paste0("    Spearman correlation FEV1 p: ", pp));
 	print(paste0("    Spearman correlation FEV1/FVC r: ", rrt));
 	print(paste0("    Spearman correlation FEV1/FVC p: ", ppt));
+	print(paste0("    Steiger FEV1 p: ", steig_fev1$p));
+	print(paste0("    Steiger FEV1/FVC p: ", steig_fev1fvc$p));
 	
 	print(FEV1_Resistance_lm);
 	print(FEV1_FVC_Resistance_lm);

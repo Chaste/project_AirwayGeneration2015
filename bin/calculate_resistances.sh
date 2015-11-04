@@ -8,7 +8,9 @@
 MY_DIR=$(dirname $(readlink -f $0)) 
 source $MY_DIR/airprom_setup.sh
 
+#AIRWAY_TYPE=major
 AIRWAY_TYPE=generated
+#AIRWAY_TYPE=generated_tracheal
 
 # Calculate resistance
 for subject in $SUBJECTS 

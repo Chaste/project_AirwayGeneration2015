@@ -1,3 +1,4 @@
 airway_generation/TestCalculateAirwayProperties.hpp
 airway_generation/TestGenerateAirways.hpp
+airway_generation/TestGenerateTrachealKeyedAirways.hpp
 resistances/TestFlowResistance.hpp
